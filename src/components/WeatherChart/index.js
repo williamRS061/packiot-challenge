@@ -36,13 +36,15 @@ export default class WeatherChart extends Component {
 
   mapDataToChart = () => {
     const chartData = this.state.data.map(data => ({
-      hour: format(data.dt_txt, "HH:mm"),
+      hour: format(data.dt_txt, "hh:mm a"),
       temperature: data.main.temp
     }));
     chartData.splice(7, 33);
     this.setState({ chartData: chartData });
   };
   render() {
+    let date = new Date();
+    date.setDate(date.getDate() + 1);
     return (
       <>
         <ResponsiveContainer width="85%" height={300}>
@@ -52,14 +54,16 @@ export default class WeatherChart extends Component {
             data={this.state.chartData}
             margin={{ top: 15, right: 0, bottom: 5, left: 0 }}
           >
-            <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
+            <Line type="monotone" dataKey="temperature" stroke="#769AEE" />
             <CartesianGrid stroke="#ccc" strokeDasharray="7 7" />
             <XAxis dataKey="hour" />
             <YAxis />
-            <Tooltip />
+            <Tooltip formatter={value => value.toFixed() + "ºC"} />
           </LineChart>
         </ResponsiveContainer>
-        <p className="chart-description">Temperature tomorrow</p>
+        <p className="chart-description">
+          Weather for tomorrow {format(date, "MM/DD")}
+        </p>
       </>
     );
   }

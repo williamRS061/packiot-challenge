@@ -17,7 +17,10 @@
   font-weight: bold;
   font-size: 2.9em;
 }
+.custom-card #now {
+  font-size: 20px;
+}
 .custom-card #city {
-  font-size: 1.6em;
-  color: #757575;
+  font-size: 1.8em;
+  color: #424242;
 }

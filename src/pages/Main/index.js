@@ -46,10 +46,13 @@ export default class Main extends Component {
           <Spinner type="grow" />
         </div>
         <div className="custom-card">
-          <i className="fas fa-temperature-low" style={{ fontSize: "48px" }}>
+          <i className="fa fa-temperature-low" style={{ fontSize: "38px" }}>
             {" "}
           </i>
-          <p id="temperature">{temperature}ºC</p>
+          <p id="temperature">
+            {temperature}ºC <span id="now">Now</span>
+          </p>
+
           <p id="city">
             {this.state.city}, {this.state.country}
           </p>
