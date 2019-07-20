@@ -62,7 +62,7 @@ export default class WeatherChart extends Component {
           </LineChart>
         </ResponsiveContainer>
         <p className="chart-description">
-          Weather for tomorrow {format(date, "MM/DD")}
+          Weather for tomorrow {format(date, "dddd Do")}
         </p>
       </>
     );
