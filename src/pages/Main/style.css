@@ -1,0 +1,23 @@
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.custom-card {
+  height: 210px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.custom-card #temperature {
+  font-weight: bold;
+  font-size: 2.9em;
+}
+.custom-card #city {
+  font-size: 1.6em;
+  color: #757575;
+}
