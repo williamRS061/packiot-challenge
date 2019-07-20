@@ -25,7 +25,7 @@ export default class Main extends Component {
       }`;
       const response = await api.get(url);
       if (response) {
-        console.log(response);
+        //console.log(response);
         this.setState({
           city: response.data.name,
           country: response.data.sys.country,
