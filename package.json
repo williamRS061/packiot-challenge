@@ -1,8 +1,9 @@
 {
-  "name": "packiot-challenge",
+  "name": "weather-app",
+  "description": "A weather app built to PackIot challenge",
   "version": "0.1.0",
   "private": true,
-  "author": "William Rodrigues",
+  "author": "William Rodrigues <william.sh8080@gmail.com>",
   "dependencies": {
     "axios": "^0.19.0-beta.1",
     "bootstrap": "^4.3.1",
