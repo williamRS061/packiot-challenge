@@ -44,7 +44,6 @@ export default class WeatherChart extends Component {
   };
   render() {
     let date = new Date();
-    date.setDate(date.getDate() + 1);
     return (
       <>
         <ResponsiveContainer width="85%" height={300}>
@@ -62,7 +61,7 @@ export default class WeatherChart extends Component {
           </LineChart>
         </ResponsiveContainer>
         <p className="chart-description">
-          Weather for tomorrow {format(date, "dddd Do")}
+          Weather for along the day {format(date, "dddd Do")}
         </p>
       </>
     );
